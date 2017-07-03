@@ -6,14 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Blog</title>
+  <title>Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="###导语团队开发的时候我们经常要公用一个证书测试。今天我就讲一下证书的配置（已测试证书为例，正式证书几乎一样的过程步骤）。 ####添加ID先开打开发者中心  ，点开 account   ,添加一个ID先该填写的都填写一下BundleID 不要写错了 ID 添加完了。 ####添加设备（生产证书无需添加）name  uuid填写一下，不知道uuid就连上电脑在iTunes上看一下、把需要测试的设">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/07/03/certificate/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="###导语团队开发的时候我们经常要公用一个证书测试。今天我就讲一下证书的配置（已测试证书为例，正式证书几乎一样的过程步骤）。 ####添加ID先开打开发者中心  ，点开 account   ,添加一个ID先该填写的都填写一下BundleID 不要写错了 ID 添加完了。 ####添加设备（生产证书无需添加）name  uuid填写一下，不知道uuid就连上电脑在iTunes上看一下、把需要测试的设">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-66ebc4cd1f40b209.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-dd62e15a67a46949.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-b59860c95db958d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-9dcd8107f9b4e858.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-b6808637d8dab9a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-78be8de8cf705c9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-d72ef9630c3d0f66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-dd9d552d8b099330.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-cf10b8d66fedf7e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-612c83937fa13a89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-03abe9a887843f3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-55d11a173675bab2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-15a77f7f011b537a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-c0eec0f8a91517e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-07-03T07:35:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Blog">
+<meta name="twitter:description" content="###导语团队开发的时候我们经常要公用一个证书测试。今天我就讲一下证书的配置（已测试证书为例，正式证书几乎一样的过程步骤）。 ####添加ID先开打开发者中心  ，点开 account   ,添加一个ID先该填写的都填写一下BundleID 不要写错了 ID 添加完了。 ####添加设备（生产证书无需添加）name  uuid填写一下，不知道uuid就连上电脑在iTunes上看一下、把需要测试的设">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2530176-66ebc4cd1f40b209.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -137,64 +156,160 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-certificate" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###导语<br>团队开发的时候我们经常要公用一个证书测试。今天我就讲一下证书的配置（已测试证书为例，正式证书几乎一样的过程步骤）。</p>
+<p>####添加ID<br><a href="https://developer.apple.com" target="_blank" rel="external">先开打开发者中心</a>  ，点开 account   ,<br><img src="http://upload-images.jianshu.io/upload_images/2530176-66ebc4cd1f40b209.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"><br>添加一个ID先<br><img src="http://upload-images.jianshu.io/upload_images/2530176-dd62e15a67a46949.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"><br>该填写的都填写一下BundleID 不要写错了<br><img src="http://upload-images.jianshu.io/upload_images/2530176-b59860c95db958d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3.png"></p>
+<p>ID 添加完了。</p>
+<p>####添加设备（生产证书无需添加）<br>name  uuid填写一下，不知道uuid就连上电脑在iTunes上看一下、把需要测试的设备uuid加进去 （否者打出来的包不能安装的）<br><img src="http://upload-images.jianshu.io/upload_images/2530176-9dcd8107f9b4e858.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="12.png"></p>
+<p>####开始配置<br><img src="http://upload-images.jianshu.io/upload_images/2530176-b6808637d8dab9a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="4.png"></p>
+<p>邮件地址写个自己的就行  然后保存在本地<br><img src="http://upload-images.jianshu.io/upload_images/2530176-78be8de8cf705c9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5.png"><br>生成一个这样的文件<br><img src="http://upload-images.jianshu.io/upload_images/2530176-d72ef9630c3d0f66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="6.png"></p>
+<p>然后创建证书</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2530176-dd9d552d8b099330.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="7.png"></p>
+<p>继续往下走  然后选择刚创建的文件<br><img src="http://upload-images.jianshu.io/upload_images/2530176-cf10b8d66fedf7e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="8.png"><br>选择完之后将刚刚的证书下载下来。</p>
+<p>继续配置描述文件<br><img src="http://upload-images.jianshu.io/upload_images/2530176-612c83937fa13a89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="13.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2530176-03abe9a887843f3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="9.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2530176-55d11a173675bab2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="10.png"></p>
+<p>最后把配置好的描述文件也下载下来</p>
+<p>还有最后一步 导出p12文件 ，因为时间久远之后导的话会分不清楚到底是哪一个。<br>打开钥匙串导出p12<br><img src="http://upload-images.jianshu.io/upload_images/2530176-15a77f7f011b537a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="14.png"></p>
+<p>把这四个文件保存起来放在一个文件夹里面。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2530176-c0eec0f8a91517e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="15.png"></p>
+<p>如果你的同事需要用直接将文件夹给他  双击全部打开就可以了。生产证书的几乎一样就不再重复了。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/03/certificate/" class="archive-article-date">
-  	<time datetime="2017-07-03T07:35:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-03</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/03/certificate/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/25/MyFirstBlog/" class="archive-article-date">
-  	<time datetime="2017-06-25T02:20:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-25</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/06/25/MyFirstBlog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="certificate" data-title="" data-url="http://yoursite.com/2017/07/03/certificate/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -217,8 +332,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
