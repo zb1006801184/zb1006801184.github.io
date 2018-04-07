@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | Blog</title>
+  <title>二、集成weex到现有项目中（iOS视角） | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="##导语研究weex之后一段时间 ，我仔细考虑了一下weex的优点和缺点。优点：  俩端代码共用率极高（不考虑前端，只考虑iOS  安卓） 热更新 接近原生的体验 较低的学习成本  优点的同时缺点也是这么的夸张，缺点：  文档不详细 坑比较多 复杂的业务场景无法实现  基于以上考虑，所以weex比较适合和原生混合开发。较简单、需求经常迭代的页面可用weex页面，较复杂的可使用native，而且we">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二、集成weex到现有项目中（iOS视角）">
+<meta property="og:url" content="http://yoursite.com/2018/04/07/WeexStudyTwo/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="##导语研究weex之后一段时间 ，我仔细考虑了一下weex的优点和缺点。优点：  俩端代码共用率极高（不考虑前端，只考虑iOS  安卓） 热更新 接近原生的体验 较低的学习成本  优点的同时缺点也是这么的夸张，缺点：  文档不详细 坑比较多 复杂的业务场景无法实现  基于以上考虑，所以weex比较适合和原生混合开发。较简单、需求经常迭代的页面可用weex页面，较复杂的可使用native，而且we">
+<meta property="og:updated_time" content="2018-04-07T06:36:59.391Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog">
+<meta name="twitter:title" content="二、集成weex到现有项目中（iOS视角）">
+<meta name="twitter:description" content="##导语研究weex之后一段时间 ，我仔细考虑了一下weex的优点和缺点。优点：  俩端代码共用率极高（不考虑前端，只考虑iOS  安卓） 热更新 接近原生的体验 较低的学习成本  优点的同时缺点也是这么的夸张，缺点：  文档不详细 坑比较多 复杂的业务场景无法实现  基于以上考虑，所以weex比较适合和原生混合开发。较简单、需求经常迭代的页面可用weex页面，较复杂的可使用native，而且we">
   
     <link rel="alternative" href="/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -137,76 +141,202 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-WeexStudyTwo" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/03/certificate/" class="archive-article-date">
-  	<time datetime="2017-07-03T07:35:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/03/certificate/">配置证书</a>
+    <h1 class="article-title" itemprop="name">
+      二、集成weex到现有项目中（iOS视角）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/25/MyFirstBlog/" class="archive-article-date">
-  	<time datetime="2017-06-25T02:20:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-25</time>
+        
+        <a href="/2018/04/07/WeexStudyTwo/" class="archive-article-date">
+  	<time datetime="2018-04-07T06:36:59.355Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-07</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/25/MyFirstBlog/">新的篇章</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##导语<br>研究weex之后一段时间 ，我仔细考虑了一下weex的优点和缺点。<br>优点：</p>
+<ol>
+<li>俩端代码共用率极高（不考虑前端，只考虑iOS  安卓）</li>
+<li>热更新</li>
+<li>接近原生的体验</li>
+<li>较低的学习成本</li>
+</ol>
+<p>优点的同时缺点也是这么的夸张，<br>缺点：</p>
+<ol>
+<li>文档不详细</li>
+<li>坑比较多</li>
+<li>复杂的业务场景无法实现</li>
+</ol>
+<p>基于以上考虑，所以weex比较适合和原生混合开发。较简单、需求经常迭代的页面可用weex页面，较复杂的可使用native，而且weex开发可使用native组件，所以可以让人大胆的尝试weex不用担心出现无法实现的业务而爆炸（本人研究的深度有限，如有不对欢迎指出）。</p>
+<p>###一、导入SDK<br>使用pod 导入WeexSDK(建议使用最新版本)</p>
+<blockquote>
+<p>pod ‘WeexSDK’</p>
+<p>###二、初始化WeexSDK<br>基本信息的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[WXAppConfiguration setAppGroup:@&quot;AliApp&quot;];</div><div class="line">[WXAppConfiguration setAppName:@&quot;WeexDemo&quot;];</div><div class="line">[WXAppConfiguration setAppVersion:@&quot;1.0.0&quot;];</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>初始化SDK<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine initSDKEnvironment]</div></pre></td></tr></table></figure></p>
+<p>注册自定义视图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerComponent:@&quot;MyView&quot; withClass:[MyViewComponent class]];</div></pre></td></tr></table></figure></p>
+<p>注册自定义组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerModule:@&quot;event&quot; withClass:[WXEventModule class]];</div></pre></td></tr></table></figure></p>
+<p>备注：以上俩个注册第一个是native组件，第二是调用native组件</p>
+<p>图片下载注册（weex并不提供此功能 需要原生实现 oc视角使用SDWebImage）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerHandler:[WXNavigationDefaultImpl new] withProtocol:@protocol(WXNavigationProtocol)]</div></pre></td></tr></table></figure></p>
+<p>打印日志<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXLog setLogLevel: WXLogLevelAll]</div></pre></td></tr></table></figure></p>
+<p>###三、渲染页面<br>Weex 支持整体页面渲染和部分渲染两种模式，你需要做的事情是用指定的 URL 渲染 Weex 的 view，然后添加到它的父容器上，父容器一般都是 viewController。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">[_instance destroyInstance];</div><div class="line">_instance = [[WXSDKInstance alloc] init];</div><div class="line">_instance.viewController = self;</div><div class="line">CGFloat width = self.view.frame.size.width;</div><div class="line">_instance.frame = CGRectMake(self.view.frame.size.width-width, 0, width, _weexHeight);</div><div class="line"></div><div class="line">__weak typeof(self) weakSelf = self;</div><div class="line">_instance.onCreate = ^(UIView *view) &#123;</div><div class="line">[weakSelf.weexView removeFromSuperview];</div><div class="line">weakSelf.weexView = view;</div><div class="line">[weakSelf.view addSubview:weakSelf.weexView];</div><div class="line">&#125;;</div><div class="line">_instance.onFailed = ^(NSError *error) &#123;</div><div class="line">NSLog(@&quot;failed %@&quot;,error);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">_instance.renderFinish = ^(UIView *view) &#123;</div><div class="line">NSLog(@&quot;render finish&quot;);</div><div class="line">[weakSelf _updateInstanceState:WeexInstanceAppear];</div><div class="line">&#125;;</div><div class="line"></div><div class="line">_instance.updateFinish = ^(UIView *view) &#123;</div><div class="line">NSLog(@&quot;update Finish&quot;);</div><div class="line">&#125;;</div><div class="line">NSString *url = [NSString stringWithFormat:@&quot;file://%@/index.js&quot;,[NSBundle mainBundle].bundlePath];</div><div class="line"></div><div class="line">[_instance renderWithURL:[NSURL URLWithString:url] options:@&#123;@&quot;bundleUrl&quot;:url&#125; data:nil];</div></pre></td></tr></table></figure>
+<p>###五、销毁<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (void)dealloc</div><div class="line">&#123;</div><div class="line">[_instance destroyInstance];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>###六、 导入 Weex SDK framework 到工程（官方文档上的）</p>
+<ol>
+<li><a href="https://github.com/apache/incubator-weex.git" target="_blank" rel="external">https://github.com/apache/incubator-weex.git</a> 下载这个项目编译</li>
+<li>weex/ios/sdk/Products 目录下的framework导入自己的工程中</li>
+<li>添加 js-framework 到自己的 main bundle, js-framework 的位置在 WeexSDK.framework 中，文件名称为 native-bundle-main.js</li>
+</ol>
+<p><a href="https://github.com/zb1006801184/weexStudyDemo" target="_blank" rel="external">demo</a>中firstDemo工程</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/04/07/WeexStudyTwo/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/04/07/WeexStudyOne/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          一、weex 环境的搭建(iOS视角)
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/07/03/certificate/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">配置证书</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="WeexStudyTwo" data-title="二、集成weex到现有项目中（iOS视角）" data-url="http://yoursite.com/2018/04/07/WeexStudyTwo/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -229,8 +359,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

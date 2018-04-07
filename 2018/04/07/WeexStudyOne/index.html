@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | Blog</title>
+  <title>一、weex 环境的搭建(iOS视角) | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="###安装依赖  安装 Homebrew 安装node.js brew install node   安装weex-toolkit（Weex 官方提供了 weex-toolkit 的脚手架工具来辅助开发和调试） $ npm install -g weex-toolkit   基本上的开发环境已经装好了，现在初始化我们的第一个项目（以下是创建好项目之后的部分操作） weex create first">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一、weex 环境的搭建(iOS视角)">
+<meta property="og:url" content="http://yoursite.com/2018/04/07/WeexStudyOne/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="###安装依赖  安装 Homebrew 安装node.js brew install node   安装weex-toolkit（Weex 官方提供了 weex-toolkit 的脚手架工具来辅助开发和调试） $ npm install -g weex-toolkit   基本上的开发环境已经装好了，现在初始化我们的第一个项目（以下是创建好项目之后的部分操作） weex create first">
+<meta property="og:updated_time" content="2018-04-07T06:37:40.144Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog">
+<meta name="twitter:title" content="一、weex 环境的搭建(iOS视角)">
+<meta name="twitter:description" content="###安装依赖  安装 Homebrew 安装node.js brew install node   安装weex-toolkit（Weex 官方提供了 weex-toolkit 的脚手架工具来辅助开发和调试） $ npm install -g weex-toolkit   基本上的开发环境已经装好了，现在初始化我们的第一个项目（以下是创建好项目之后的部分操作） weex create first">
   
     <link rel="alternative" href="/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -137,76 +141,195 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-WeexStudyOne" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/03/certificate/" class="archive-article-date">
-  	<time datetime="2017-07-03T07:35:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/03/certificate/">配置证书</a>
+    <h1 class="article-title" itemprop="name">
+      一、weex 环境的搭建(iOS视角)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/25/MyFirstBlog/" class="archive-article-date">
-  	<time datetime="2017-06-25T02:20:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-25</time>
+        
+        <a href="/2018/04/07/WeexStudyOne/" class="archive-article-date">
+  	<time datetime="2018-04-07T06:37:40.112Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-07</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/25/MyFirstBlog/">新的篇章</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###安装依赖</p>
+<ol>
+<li>安装 <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a></li>
+<li>安装node.js<blockquote>
+<p>brew install node</p>
+</blockquote>
+</li>
+<li>安装weex-toolkit（Weex 官方提供了 weex-toolkit 的脚手架工具来辅助开发和调试）<blockquote>
+<p>$ npm install -g weex-toolkit</p>
+</blockquote>
+</li>
+<li>基本上的开发环境已经装好了，现在初始化我们的第一个项目（以下是创建好项目之后的部分操作）<blockquote>
+<p>weex create first-project</p>
+</blockquote>
+</li>
+</ol>
+<p>创建完成之后我们添加依赖</p>
+<blockquote>
+<p>npm install</p>
+</blockquote>
+<p>这个时候我们就可以运行看看效果了</p>
+<blockquote>
+<p>npm start</p>
+</blockquote>
+<p>之后我们需要在模拟器上运行看下效果 这个时候我们就需要添加iOS模块了(默认你已经安装了Xcode且配置好了)。</p>
+<blockquote>
+<p>weex platform add ios</p>
+</blockquote>
+<p>然后你应该cd 到/platfrom/ios   下进行安装依赖  (默认已经有cocoapods环境，如果没有的自行安装，不多说)</p>
+<blockquote>
+<p>pod install</p>
+</blockquote>
+<p>走到这里我们基本上已经可以在xcode模拟器上运行项目了。我们到项目的下执行运行命令</p>
+<blockquote>
+<p>weex run ios</p>
+</blockquote>
+<p>到这里我们第一个hello world就完成了。</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/04/07/WeexStudyOne/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/04/07/WeexStudyTwo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二、集成weex到现有项目中（iOS视角）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="WeexStudyOne" data-title="一、weex 环境的搭建(iOS视角)" data-url="http://yoursite.com/2018/04/07/WeexStudyOne/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -229,8 +352,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

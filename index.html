@@ -139,6 +139,172 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-WeexStudyOne" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/07/WeexStudyOne/">一、weex 环境的搭建(iOS视角)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/07/WeexStudyOne/" class="archive-article-date">
+  	<time datetime="2018-04-07T06:37:40.112Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###安装依赖</p>
+<ol>
+<li>安装 <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a></li>
+<li>安装node.js<blockquote>
+<p>brew install node</p>
+</blockquote>
+</li>
+<li>安装weex-toolkit（Weex 官方提供了 weex-toolkit 的脚手架工具来辅助开发和调试）<blockquote>
+<p>$ npm install -g weex-toolkit</p>
+</blockquote>
+</li>
+<li>基本上的开发环境已经装好了，现在初始化我们的第一个项目（以下是创建好项目之后的部分操作）<blockquote>
+<p>weex create first-project</p>
+</blockquote>
+</li>
+</ol>
+<p>创建完成之后我们添加依赖</p>
+<blockquote>
+<p>npm install</p>
+</blockquote>
+<p>这个时候我们就可以运行看看效果了</p>
+<blockquote>
+<p>npm start</p>
+</blockquote>
+<p>之后我们需要在模拟器上运行看下效果 这个时候我们就需要添加iOS模块了(默认你已经安装了Xcode且配置好了)。</p>
+<blockquote>
+<p>weex platform add ios</p>
+</blockquote>
+<p>然后你应该cd 到/platfrom/ios   下进行安装依赖  (默认已经有cocoapods环境，如果没有的自行安装，不多说)</p>
+<blockquote>
+<p>pod install</p>
+</blockquote>
+<p>走到这里我们基本上已经可以在xcode模拟器上运行项目了。我们到项目的下执行运行命令</p>
+<blockquote>
+<p>weex run ios</p>
+</blockquote>
+<p>到这里我们第一个hello world就完成了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/07/WeexStudyOne/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-WeexStudyTwo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/07/WeexStudyTwo/">二、集成weex到现有项目中（iOS视角）</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/07/WeexStudyTwo/" class="archive-article-date">
+  	<time datetime="2018-04-07T06:36:59.355Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##导语<br>研究weex之后一段时间 ，我仔细考虑了一下weex的优点和缺点。<br>优点：</p>
+<ol>
+<li>俩端代码共用率极高（不考虑前端，只考虑iOS  安卓）</li>
+<li>热更新</li>
+<li>接近原生的体验</li>
+<li>较低的学习成本</li>
+</ol>
+<p>优点的同时缺点也是这么的夸张，<br>缺点：</p>
+<ol>
+<li>文档不详细</li>
+<li>坑比较多</li>
+<li>复杂的业务场景无法实现</li>
+</ol>
+<p>基于以上考虑，所以weex比较适合和原生混合开发。较简单、需求经常迭代的页面可用weex页面，较复杂的可使用native，而且weex开发可使用native组件，所以可以让人大胆的尝试weex不用担心出现无法实现的业务而爆炸（本人研究的深度有限，如有不对欢迎指出）。</p>
+<p>###一、导入SDK<br>使用pod 导入WeexSDK(建议使用最新版本)</p>
+<blockquote>
+<p>pod ‘WeexSDK’</p>
+<p>###二、初始化WeexSDK<br>基本信息的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[WXAppConfiguration setAppGroup:@&quot;AliApp&quot;];</div><div class="line">[WXAppConfiguration setAppName:@&quot;WeexDemo&quot;];</div><div class="line">[WXAppConfiguration setAppVersion:@&quot;1.0.0&quot;];</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>初始化SDK<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine initSDKEnvironment]</div></pre></td></tr></table></figure></p>
+<p>注册自定义视图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerComponent:@&quot;MyView&quot; withClass:[MyViewComponent class]];</div></pre></td></tr></table></figure></p>
+<p>注册自定义组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerModule:@&quot;event&quot; withClass:[WXEventModule class]];</div></pre></td></tr></table></figure></p>
+<p>备注：以上俩个注册第一个是native组件，第二是调用native组件</p>
+<p>图片下载注册（weex并不提供此功能 需要原生实现 oc视角使用SDWebImage）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerHandler:[WXNavigationDefaultImpl new] withProtocol:@protocol(WXNavigationProtocol)]</div></pre></td></tr></table></figure></p>
+<p>打印日志<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXLog setLogLevel: WXLogLevelAll]</div></pre></td></tr></table></figure></p>
+<p>###三、渲染页面<br>Weex 支持整体页面渲染和部分渲染两种模式，你需要做的事情是用指定的 URL 渲染 Weex 的 view，然后添加到它的父容器上，父容器一般都是 viewController。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">[_instance destroyInstance];</div><div class="line">_instance = [[WXSDKInstance alloc] init];</div><div class="line">_instance.viewController = self;</div><div class="line">CGFloat width = self.view.frame.size.width;</div><div class="line">_instance.frame = CGRectMake(self.view.frame.size.width-width, 0, width, _weexHeight);</div><div class="line"></div><div class="line">__weak typeof(self) weakSelf = self;</div><div class="line">_instance.onCreate = ^(UIView *view) &#123;</div><div class="line">[weakSelf.weexView removeFromSuperview];</div><div class="line">weakSelf.weexView = view;</div><div class="line">[weakSelf.view addSubview:weakSelf.weexView];</div><div class="line">&#125;;</div><div class="line">_instance.onFailed = ^(NSError *error) &#123;</div><div class="line">NSLog(@&quot;failed %@&quot;,error);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">_instance.renderFinish = ^(UIView *view) &#123;</div><div class="line">NSLog(@&quot;render finish&quot;);</div><div class="line">[weakSelf _updateInstanceState:WeexInstanceAppear];</div><div class="line">&#125;;</div><div class="line"></div><div class="line">_instance.updateFinish = ^(UIView *view) &#123;</div><div class="line">NSLog(@&quot;update Finish&quot;);</div><div class="line">&#125;;</div><div class="line">NSString *url = [NSString stringWithFormat:@&quot;file://%@/index.js&quot;,[NSBundle mainBundle].bundlePath];</div><div class="line"></div><div class="line">[_instance renderWithURL:[NSURL URLWithString:url] options:@&#123;@&quot;bundleUrl&quot;:url&#125; data:nil];</div></pre></td></tr></table></figure>
+<p>###五、销毁<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (void)dealloc</div><div class="line">&#123;</div><div class="line">[_instance destroyInstance];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>###六、 导入 Weex SDK framework 到工程（官方文档上的）</p>
+<ol>
+<li><a href="https://github.com/apache/incubator-weex.git" target="_blank" rel="external">https://github.com/apache/incubator-weex.git</a> 下载这个项目编译</li>
+<li>weex/ios/sdk/Products 目录下的framework导入自己的工程中</li>
+<li>添加 js-framework 到自己的 main bundle, js-framework 的位置在 WeexSDK.framework 中，文件名称为 native-bundle-main.js</li>
+</ol>
+<p><a href="https://github.com/zb1006801184/weexStudyDemo" target="_blank" rel="external">demo</a>中firstDemo工程</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/07/WeexStudyTwo/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-certificate" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -237,234 +403,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/06/25/MyFirstBlog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-WeexPit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/25/WeexPit/">weex开发过程遇到的各种坑</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/25/WeexPit/" class="archive-article-date">
-  	<time datetime="2017-06-25T02:20:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="无法-pod-update"><a href="#无法-pod-update" class="headerlink" title="无法 pod update"></a>无法 pod update</h2><p><img src="https://upload-images.jianshu.io/upload_images/2530176-9ab57133e24eb375.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>当我们完成了项目的创建 运行weex run ios想在模拟器上看一下发现报这个错，原因是无法执行pod update<br>解决办法：更新pod    具体操作更安装一样   执行sudo gem install cocoapods（环境版本太低的话自行升级不多说）</p>
-<p>##没有设置启动模拟器 Error: simctl error running ‘list’: xcrun: error: unable to find utility “simctl”, not a developer tool or in PATH</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2530176-0d1cafb86f48d4ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>依然是我们运行weex run ios的时候  报错.</p>
-<p>解决方案: xcode - perferences - locations -command line tools  设置一下就OK了（如下图）。<br><img src="https://upload-images.jianshu.io/upload_images/2530176-aafa461b99da49b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h2 id="weexpack版本过低或者未安装-Error-Error-Command-failed-xtoolkit-node-modules-weexpack-lib-utils-installIosDeploy-sh-–unsafe-perm-true-–allow-root"><a href="#weexpack版本过低或者未安装-Error-Error-Command-failed-xtoolkit-node-modules-weexpack-lib-utils-installIosDeploy-sh-–unsafe-perm-true-–allow-root" class="headerlink" title="weexpack版本过低或者未安装   Error:Error: Command failed: /.xtoolkit/node_modules/weexpack/lib/utils/installIosDeploy.sh/ –unsafe-perm=true –allow-root"></a>weexpack版本过低或者未安装   Error:Error: Command failed: /.xtoolkit/node_modules/weexpack/lib/utils/installIosDeploy.sh/ –unsafe-perm=true –allow-root</h2><p>/bin/sh: /Users/chenxiaowei/.xtoolkit/node_modules/weexpack/lib/utils/installIosDeploy.sh/: No such file or directory</p>
-<p>at ChildProcess.exithandler (child_process.js:273:12)<br>at ChildProcess.emit (events.js:180:13)<br>at maybeClose (internal/child_process.js:936:16)<br>at Socket.stream.socket.on (internal/child_process.js:353:11)<br>at Socket.emit (events.js:180:13)<br>at Pipe._handle.close [as _onclose] (net.js:541:12)</p>
-<p>找不到某些文件路径</p>
-<p>解决方案:</p>
-<blockquote>
-<p>npm install weexpack -g</p>
-</blockquote>
-<p>其实官方已经已经集成在 weex-toolkits 上，但是目前还是有部分人会安装不上具体原因不详，如果没有安装上必须单独安装。</p>
-<p>###我承认坑有点点多文档也稍微简单了一点点，不过踩完坑之后用起来还是很舒服的。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/25/WeexPit/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-WeexStudyOne" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/25/WeexStudyOne/">一、weex 环境的搭建(iOS视角)</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/25/WeexStudyOne/" class="archive-article-date">
-  	<time datetime="2017-06-25T02:20:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###安装依赖</p>
-<ol>
-<li>安装 <a href="http://brew.sh/" target="_blank" rel="external">Homebrew</a></li>
-<li>安装node.js<blockquote>
-<p>brew install node</p>
-</blockquote>
-</li>
-<li>安装weex-toolkit（Weex 官方提供了 weex-toolkit 的脚手架工具来辅助开发和调试）<blockquote>
-<p>$ npm install -g weex-toolkit</p>
-</blockquote>
-</li>
-<li>基本上的开发环境已经装好了，现在初始化我们的第一个项目（以下是创建好项目之后的部分操作）<blockquote>
-<p>weex create first-project</p>
-</blockquote>
-</li>
-</ol>
-<p>创建完成之后我们添加依赖</p>
-<blockquote>
-<p>npm install</p>
-</blockquote>
-<p>这个时候我们就可以运行看看效果了</p>
-<blockquote>
-<p>npm start</p>
-</blockquote>
-<p>之后我们需要在模拟器上运行看下效果 这个时候我们就需要添加iOS模块了(默认你已经安装了Xcode且配置好了)。</p>
-<blockquote>
-<p>weex platform add ios</p>
-</blockquote>
-<p>然后你应该cd 到/platfrom/ios   下进行安装依赖  (默认已经有cocoapods环境，如果没有的自行安装，不多说)</p>
-<blockquote>
-<p>pod install</p>
-</blockquote>
-<p>走到这里我们基本上已经可以在xcode模拟器上运行项目了。我们到项目的下执行运行命令</p>
-<blockquote>
-<p>weex run ios</p>
-</blockquote>
-<p>到这里我们第一个hello world就完成了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/25/WeexStudyOne/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-WeexStudyTwo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/25/WeexStudyTwo/">二、集成weex到现有项目中（iOS视角）</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/25/WeexStudyTwo/" class="archive-article-date">
-  	<time datetime="2017-06-25T02:20:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##导语<br>研究weex之后一段时间 ，我仔细考虑了一下weex的优点和缺点。<br>优点：</p>
-<ol>
-<li>俩端代码共用率极高（不考虑前端，只考虑iOS  安卓）</li>
-<li>热更新</li>
-<li>接近原生的体验</li>
-<li>较低的学习成本</li>
-</ol>
-<p>优点的同时缺点也是这么的夸张，<br>缺点：</p>
-<ol>
-<li>文档不详细</li>
-<li>坑比较多</li>
-<li>复杂的业务场景无法实现</li>
-</ol>
-<p>基于以上考虑，所以weex比较适合和原生混合开发。较简单、需求经常迭代的页面可用weex页面，较复杂的可使用native，而且weex开发可使用native组件，所以可以让人大胆的尝试weex不用担心出现无法实现的业务而爆炸（本人研究的深度有限，如有不对欢迎指出）。</p>
-<p>###一、导入SDK<br>使用pod 导入WeexSDK(建议使用最新版本)</p>
-<blockquote>
-<p>pod ‘WeexSDK’</p>
-<p>###二、初始化WeexSDK<br>基本信息的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[WXAppConfiguration setAppGroup:@&quot;AliApp&quot;];</div><div class="line">[WXAppConfiguration setAppName:@&quot;WeexDemo&quot;];</div><div class="line">[WXAppConfiguration setAppVersion:@&quot;1.0.0&quot;];</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p>初始化SDK<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine initSDKEnvironment]</div></pre></td></tr></table></figure></p>
-<p>注册自定义视图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerComponent:@&quot;MyView&quot; withClass:[MyViewComponent class]];</div></pre></td></tr></table></figure></p>
-<p>注册自定义组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerModule:@&quot;event&quot; withClass:[WXEventModule class]];</div></pre></td></tr></table></figure></p>
-<p>备注：以上俩个注册第一个是native组件，第二是调用native组件</p>
-<p>图片下载注册（weex并不提供此功能 需要原生实现 oc视角使用SDWebImage）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerHandler:[WXNavigationDefaultImpl new] withProtocol:@protocol(WXNavigationProtocol)]</div></pre></td></tr></table></figure></p>
-<p>打印日志<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXLog setLogLevel: WXLogLevelAll]</div></pre></td></tr></table></figure></p>
-<p>###三、渲染页面<br>Weex 支持整体页面渲染和部分渲染两种模式，你需要做的事情是用指定的 URL 渲染 Weex 的 view，然后添加到它的父容器上，父容器一般都是 viewController。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">[_instance destroyInstance];</div><div class="line">_instance = [[WXSDKInstance alloc] init];</div><div class="line">_instance.viewController = self;</div><div class="line">CGFloat width = self.view.frame.size.width;</div><div class="line">_instance.frame = CGRectMake(self.view.frame.size.width-width, 0, width, _weexHeight);</div><div class="line"></div><div class="line">__weak typeof(self) weakSelf = self;</div><div class="line">_instance.onCreate = ^(UIView *view) &#123;</div><div class="line">[weakSelf.weexView removeFromSuperview];</div><div class="line">weakSelf.weexView = view;</div><div class="line">[weakSelf.view addSubview:weakSelf.weexView];</div><div class="line">&#125;;</div><div class="line">_instance.onFailed = ^(NSError *error) &#123;</div><div class="line">NSLog(@&quot;failed %@&quot;,error);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">_instance.renderFinish = ^(UIView *view) &#123;</div><div class="line">NSLog(@&quot;render finish&quot;);</div><div class="line">[weakSelf _updateInstanceState:WeexInstanceAppear];</div><div class="line">&#125;;</div><div class="line"></div><div class="line">_instance.updateFinish = ^(UIView *view) &#123;</div><div class="line">NSLog(@&quot;update Finish&quot;);</div><div class="line">&#125;;</div><div class="line">NSString *url = [NSString stringWithFormat:@&quot;file://%@/index.js&quot;,[NSBundle mainBundle].bundlePath];</div><div class="line"></div><div class="line">[_instance renderWithURL:[NSURL URLWithString:url] options:@&#123;@&quot;bundleUrl&quot;:url&#125; data:nil];</div></pre></td></tr></table></figure>
-<p>###五、销毁<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (void)dealloc</div><div class="line">&#123;</div><div class="line">[_instance destroyInstance];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>###六、 导入 Weex SDK framework 到工程（官方文档上的）</p>
-<ol>
-<li><a href="https://github.com/apache/incubator-weex.git" target="_blank" rel="external">https://github.com/apache/incubator-weex.git</a> 下载这个项目编译</li>
-<li>weex/ios/sdk/Products 目录下的framework导入自己的工程中</li>
-<li>添加 js-framework 到自己的 main bundle, js-framework 的位置在 WeexSDK.framework 中，文件名称为 native-bundle-main.js</li>
-</ol>
-<p><a href="https://github.com/zb1006801184/weexStudyDemo" target="_blank" rel="external">demo</a>中firstDemo工程</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/25/WeexStudyTwo/">展开全文 >></a>
         </p>
       
 
