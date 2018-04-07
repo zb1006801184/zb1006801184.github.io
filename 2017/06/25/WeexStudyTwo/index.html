@@ -8,31 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="配置证书###导语团队开发的时候我们经常要公用一个证书测试。今天我就讲一下证书的配置（已测试证书为例，正式证书几乎一样的过程步骤）。 ####添加ID先开打开发者中心  ，点开 account   ,添加一个ID先该填写的都填写一下BundleID 不要写错了 ID 添加完了。 ####添加设备（生产证书无需添加）name  uuid填写一下，不知道uuid就连上电脑在iTunes上看一下、把需">
+  <meta name="description" content="二、集成weex到现有项目中（iOS视角）##导语研究weex之后一段时间 ，我仔细考虑了一下weex的优点和缺点。优点：  俩端代码共用率极高（不考虑前端，只考虑iOS  安卓） 热更新 接近原生的体验 较低的学习成本  优点的同时缺点也是这么的夸张，缺点：  文档不详细 坑比较多 复杂的业务场景无法实现  基于以上考虑，所以weex比较适合和原生混合开发。较简单、需求经常迭代的页面可用wee">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Blog">
-<meta property="og:url" content="http://yoursite.com/2017/07/03/certificate/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/06/25/WeexStudyTwo/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="配置证书###导语团队开发的时候我们经常要公用一个证书测试。今天我就讲一下证书的配置（已测试证书为例，正式证书几乎一样的过程步骤）。 ####添加ID先开打开发者中心  ，点开 account   ,添加一个ID先该填写的都填写一下BundleID 不要写错了 ID 添加完了。 ####添加设备（生产证书无需添加）name  uuid填写一下，不知道uuid就连上电脑在iTunes上看一下、把需">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-66ebc4cd1f40b209.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-dd62e15a67a46949.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-b59860c95db958d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-9dcd8107f9b4e858.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-b6808637d8dab9a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-78be8de8cf705c9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-d72ef9630c3d0f66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-dd9d552d8b099330.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-cf10b8d66fedf7e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-612c83937fa13a89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-03abe9a887843f3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-55d11a173675bab2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-15a77f7f011b537a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2530176-c0eec0f8a91517e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-07-03T07:43:07.000Z">
+<meta property="og:description" content="二、集成weex到现有项目中（iOS视角）##导语研究weex之后一段时间 ，我仔细考虑了一下weex的优点和缺点。优点：  俩端代码共用率极高（不考虑前端，只考虑iOS  安卓） 热更新 接近原生的体验 较低的学习成本  优点的同时缺点也是这么的夸张，缺点：  文档不详细 坑比较多 复杂的业务场景无法实现  基于以上考虑，所以weex比较适合和原生混合开发。较简单、需求经常迭代的页面可用wee">
+<meta property="og:updated_time" content="2018-04-07T06:11:58.483Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Blog">
-<meta name="twitter:description" content="配置证书###导语团队开发的时候我们经常要公用一个证书测试。今天我就讲一下证书的配置（已测试证书为例，正式证书几乎一样的过程步骤）。 ####添加ID先开打开发者中心  ，点开 account   ,添加一个ID先该填写的都填写一下BundleID 不要写错了 ID 添加完了。 ####添加设备（生产证书无需添加）name  uuid填写一下，不知道uuid就连上电脑在iTunes上看一下、把需">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2530176-66ebc4cd1f40b209.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:description" content="二、集成weex到现有项目中（iOS视角）##导语研究weex之后一段时间 ，我仔细考虑了一下weex的优点和缺点。优点：  俩端代码共用率极高（不考虑前端，只考虑iOS  安卓） 热更新 接近原生的体验 较低的学习成本  优点的同时缺点也是这么的夸张，缺点：  文档不详细 坑比较多 复杂的业务场景无法实现  基于以上考虑，所以weex比较适合和原生混合开发。较简单、需求经常迭代的页面可用wee">
   
     <link rel="alternative" href="/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -156,29 +141,47 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-certificate" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-WeexStudyTwo" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h2 id="配置证书"><a href="#配置证书" class="headerlink" title="配置证书"></a>配置证书</h2><p>###导语<br>团队开发的时候我们经常要公用一个证书测试。今天我就讲一下证书的配置（已测试证书为例，正式证书几乎一样的过程步骤）。</p>
-<p>####添加ID<br><a href="https://developer.apple.com" target="_blank" rel="external">先开打开发者中心</a>  ，点开 account   ,<br><img src="http://upload-images.jianshu.io/upload_images/2530176-66ebc4cd1f40b209.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"><br>添加一个ID先<br><img src="http://upload-images.jianshu.io/upload_images/2530176-dd62e15a67a46949.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"><br>该填写的都填写一下BundleID 不要写错了<br><img src="http://upload-images.jianshu.io/upload_images/2530176-b59860c95db958d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3.png"></p>
-<p>ID 添加完了。</p>
-<p>####添加设备（生产证书无需添加）<br>name  uuid填写一下，不知道uuid就连上电脑在iTunes上看一下、把需要测试的设备uuid加进去 （否者打出来的包不能安装的）<br><img src="http://upload-images.jianshu.io/upload_images/2530176-9dcd8107f9b4e858.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="12.png"></p>
-<p>####开始配置<br><img src="http://upload-images.jianshu.io/upload_images/2530176-b6808637d8dab9a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="4.png"></p>
-<p>邮件地址写个自己的就行  然后保存在本地<br><img src="http://upload-images.jianshu.io/upload_images/2530176-78be8de8cf705c9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="5.png"><br>生成一个这样的文件<br><img src="http://upload-images.jianshu.io/upload_images/2530176-d72ef9630c3d0f66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="6.png"></p>
-<p>然后创建证书</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2530176-dd9d552d8b099330.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="7.png"></p>
-<p>继续往下走  然后选择刚创建的文件<br><img src="http://upload-images.jianshu.io/upload_images/2530176-cf10b8d66fedf7e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="8.png"><br>选择完之后将刚刚的证书下载下来。</p>
-<p>继续配置描述文件<br><img src="http://upload-images.jianshu.io/upload_images/2530176-612c83937fa13a89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="13.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2530176-03abe9a887843f3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="9.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2530176-55d11a173675bab2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="10.png"></p>
-<p>最后把配置好的描述文件也下载下来</p>
-<p>还有最后一步 导出p12文件 ，因为时间久远之后导的话会分不清楚到底是哪一个。<br>打开钥匙串导出p12<br><img src="http://upload-images.jianshu.io/upload_images/2530176-15a77f7f011b537a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="14.png"></p>
-<p>把这四个文件保存起来放在一个文件夹里面。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2530176-c0eec0f8a91517e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="15.png"></p>
-<p>如果你的同事需要用直接将文件夹给他  双击全部打开就可以了。生产证书的几乎一样就不再重复了。</p>
+<h2 id="二、集成weex到现有项目中（iOS视角）"><a href="#二、集成weex到现有项目中（iOS视角）" class="headerlink" title="二、集成weex到现有项目中（iOS视角）"></a>二、集成weex到现有项目中（iOS视角）</h2><p>##导语<br>研究weex之后一段时间 ，我仔细考虑了一下weex的优点和缺点。<br>优点：</p>
+<ol>
+<li>俩端代码共用率极高（不考虑前端，只考虑iOS  安卓）</li>
+<li>热更新</li>
+<li>接近原生的体验</li>
+<li>较低的学习成本</li>
+</ol>
+<p>优点的同时缺点也是这么的夸张，<br>缺点：</p>
+<ol>
+<li>文档不详细</li>
+<li>坑比较多</li>
+<li>复杂的业务场景无法实现</li>
+</ol>
+<p>基于以上考虑，所以weex比较适合和原生混合开发。较简单、需求经常迭代的页面可用weex页面，较复杂的可使用native，而且weex开发可使用native组件，所以可以让人大胆的尝试weex不用担心出现无法实现的业务而爆炸（本人研究的深度有限，如有不对欢迎指出）。</p>
+<p>###一、导入SDK<br>使用pod 导入WeexSDK(建议使用最新版本)</p>
+<blockquote>
+<p>pod ‘WeexSDK’</p>
+<p>###二、初始化WeexSDK<br>基本信息的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[WXAppConfiguration setAppGroup:@&quot;AliApp&quot;];</div><div class="line">[WXAppConfiguration setAppName:@&quot;WeexDemo&quot;];</div><div class="line">[WXAppConfiguration setAppVersion:@&quot;1.0.0&quot;];</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>初始化SDK<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine initSDKEnvironment]</div></pre></td></tr></table></figure></p>
+<p>注册自定义视图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerComponent:@&quot;MyView&quot; withClass:[MyViewComponent class]];</div></pre></td></tr></table></figure></p>
+<p>注册自定义组件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerModule:@&quot;event&quot; withClass:[WXEventModule class]];</div></pre></td></tr></table></figure></p>
+<p>备注：以上俩个注册第一个是native组件，第二是调用native组件</p>
+<p>图片下载注册（weex并不提供此功能 需要原生实现 oc视角使用SDWebImage）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXSDKEngine registerHandler:[WXNavigationDefaultImpl new] withProtocol:@protocol(WXNavigationProtocol)]</div></pre></td></tr></table></figure></p>
+<p>打印日志<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[WXLog setLogLevel: WXLogLevelAll]</div></pre></td></tr></table></figure></p>
+<p>###三、渲染页面<br>Weex 支持整体页面渲染和部分渲染两种模式，你需要做的事情是用指定的 URL 渲染 Weex 的 view，然后添加到它的父容器上，父容器一般都是 viewController。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">[_instance destroyInstance];</div><div class="line">_instance = [[WXSDKInstance alloc] init];</div><div class="line">_instance.viewController = self;</div><div class="line">CGFloat width = self.view.frame.size.width;</div><div class="line">_instance.frame = CGRectMake(self.view.frame.size.width-width, 0, width, _weexHeight);</div><div class="line"></div><div class="line">__weak typeof(self) weakSelf = self;</div><div class="line">_instance.onCreate = ^(UIView *view) &#123;</div><div class="line">[weakSelf.weexView removeFromSuperview];</div><div class="line">weakSelf.weexView = view;</div><div class="line">[weakSelf.view addSubview:weakSelf.weexView];</div><div class="line">&#125;;</div><div class="line">_instance.onFailed = ^(NSError *error) &#123;</div><div class="line">NSLog(@&quot;failed %@&quot;,error);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">_instance.renderFinish = ^(UIView *view) &#123;</div><div class="line">NSLog(@&quot;render finish&quot;);</div><div class="line">[weakSelf _updateInstanceState:WeexInstanceAppear];</div><div class="line">&#125;;</div><div class="line"></div><div class="line">_instance.updateFinish = ^(UIView *view) &#123;</div><div class="line">NSLog(@&quot;update Finish&quot;);</div><div class="line">&#125;;</div><div class="line">NSString *url = [NSString stringWithFormat:@&quot;file://%@/index.js&quot;,[NSBundle mainBundle].bundlePath];</div><div class="line"></div><div class="line">[_instance renderWithURL:[NSURL URLWithString:url] options:@&#123;@&quot;bundleUrl&quot;:url&#125; data:nil];</div></pre></td></tr></table></figure>
+<p>###五、销毁<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (void)dealloc</div><div class="line">&#123;</div><div class="line">[_instance destroyInstance];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>###六、 导入 Weex SDK framework 到工程（官方文档上的）</p>
+<ol>
+<li><a href="https://github.com/apache/incubator-weex.git" target="_blank" rel="external">https://github.com/apache/incubator-weex.git</a> 下载这个项目编译</li>
+<li>weex/ios/sdk/Products 目录下的framework导入自己的工程中</li>
+<li>添加 js-framework 到自己的 main bundle, js-framework 的位置在 WeexSDK.framework 中，文件名称为 native-bundle-main.js</li>
+</ol>
+<p><a href="https://github.com/zb1006801184/weexStudyDemo" target="_blank" rel="external">demo</a>中firstDemo工程</p>
 
       
 
@@ -258,7 +261,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/03/certificate/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/25/WeexStudyTwo/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -272,8 +275,17 @@
   
 <nav id="article-nav">
   
+    <a href="/2017/06/25/WeexPit/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
-    <a href="/2017/06/25/MyFirstBlog/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2017/06/25/WeexStudyOne/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
@@ -287,7 +299,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="certificate" data-title="" data-url="http://yoursite.com/2017/07/03/certificate/"></div>
+	<div class="ds-thread" data-thread-key="WeexStudyTwo" data-title="" data-url="http://yoursite.com/2017/06/25/WeexStudyTwo/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
