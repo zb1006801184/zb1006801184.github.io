@@ -139,6 +139,68 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-WeexPit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/07/WeexPit/">weex开发过程遇到的各种坑</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/07/WeexPit/" class="archive-article-date">
+  	<time datetime="2018-04-07T06:38:11.815Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="无法-pod-update"><a href="#无法-pod-update" class="headerlink" title="无法 pod update"></a>无法 pod update</h2><p><img src="https://upload-images.jianshu.io/upload_images/2530176-9ab57133e24eb375.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>当我们完成了项目的创建 运行weex run ios想在模拟器上看一下发现报这个错，原因是无法执行pod update<br>解决办法：更新pod    具体操作更安装一样   执行sudo gem install cocoapods（环境版本太低的话自行升级不多说）</p>
+<p>##没有设置启动模拟器 Error: simctl error running ‘list’: xcrun: error: unable to find utility “simctl”, not a developer tool or in PATH</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2530176-0d1cafb86f48d4ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>依然是我们运行weex run ios的时候  报错.</p>
+<p>解决方案: xcode - perferences - locations -command line tools  设置一下就OK了（如下图）。<br><img src="https://upload-images.jianshu.io/upload_images/2530176-aafa461b99da49b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="weexpack版本过低或者未安装-Error-Error-Command-failed-xtoolkit-node-modules-weexpack-lib-utils-installIosDeploy-sh-–unsafe-perm-true-–allow-root"><a href="#weexpack版本过低或者未安装-Error-Error-Command-failed-xtoolkit-node-modules-weexpack-lib-utils-installIosDeploy-sh-–unsafe-perm-true-–allow-root" class="headerlink" title="weexpack版本过低或者未安装   Error:Error: Command failed: /.xtoolkit/node_modules/weexpack/lib/utils/installIosDeploy.sh/ –unsafe-perm=true –allow-root"></a>weexpack版本过低或者未安装   Error:Error: Command failed: /.xtoolkit/node_modules/weexpack/lib/utils/installIosDeploy.sh/ –unsafe-perm=true –allow-root</h2><p>/bin/sh: /Users/chenxiaowei/.xtoolkit/node_modules/weexpack/lib/utils/installIosDeploy.sh/: No such file or directory</p>
+<p>at ChildProcess.exithandler (child_process.js:273:12)<br>at ChildProcess.emit (events.js:180:13)<br>at maybeClose (internal/child_process.js:936:16)<br>at Socket.stream.socket.on (internal/child_process.js:353:11)<br>at Socket.emit (events.js:180:13)<br>at Pipe._handle.close [as _onclose] (net.js:541:12)</p>
+<p>找不到某些文件路径</p>
+<p>解决方案:</p>
+<blockquote>
+<p>npm install weexpack -g</p>
+</blockquote>
+<p>其实官方已经已经集成在 weex-toolkits 上，但是目前还是有部分人会安装不上具体原因不详，如果没有安装上必须单独安装。</p>
+<p>###我承认坑有点点多文档也稍微简单了一点点，不过踩完坑之后用起来还是很舒服的。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/07/WeexPit/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-WeexStudyOne" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
