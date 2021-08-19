@@ -8,7 +8,7 @@ import 'package:get/route_manager.dart';
 const double cellHeight = 90.0;
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -16,7 +16,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with CommonWidgetMixin {
   List dataList = ['1', '2', '3'];
-  void _cellItemClick({int index}) {
+  void _cellItemClick({int? index}) {
     Get.toNamed(RoutesName.DetailPageRoute);
   }
 
@@ -95,8 +95,7 @@ class _HomePageState extends State<HomePage> with CommonWidgetMixin {
         Container(
           child: Text(
             '我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述',
-            style: TextStyle(
-                fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w500),
+            style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w500),
             maxLines: 2,
             softWrap: true,
             overflow: TextOverflow.ellipsis,
@@ -106,8 +105,7 @@ class _HomePageState extends State<HomePage> with CommonWidgetMixin {
         Container(
           child: Text(
             '2021-06-21',
-            style: TextStyle(
-                fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w500),
+            style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w500),
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),

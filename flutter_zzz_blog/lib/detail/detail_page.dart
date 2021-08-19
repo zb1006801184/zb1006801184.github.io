@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
 class DetailPage extends StatefulWidget {
-  const DetailPage({Key key}) : super(key: key);
+  const DetailPage({Key? key}) : super(key: key);
 
   @override
   _DetailPageState createState() => _DetailPageState();
@@ -35,6 +35,7 @@ class _DetailPageState extends State<DetailPage> {
               return Markdown(
                 data: snapshot.data,
                 onTapLink: (s, b, c) {
+                  b = b ?? '';
                   print(s + b + c);
                 },
               );
