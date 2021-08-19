@@ -3,7 +3,7 @@ import 'package:flutter_zzz_blog/home/home_page.dart';
 import 'package:get/route_manager.dart';
 
 class RoutesName {
-  static const String DetailPageRoute = '/DetailPage';
+  static const String DetailPageRoute = '/DetailPage'; //详情页
 }
 
 class Routes {

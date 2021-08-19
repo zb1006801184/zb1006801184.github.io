@@ -16,39 +16,37 @@ class _DetailPageState extends State<DetailPage> {
     return Scaffold(
       body: Row(
         children: [
-          Expanded(
-            flex: 1,
-            child: Container(),
-          ),
-          Expanded(
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 44),
-              child: FutureBuilder(
-                future: rootBundle.loadString('assets/md/flutter_anmation.md'),
-                builder: (BuildContext context, AsyncSnapshot snapshot) {
-                  if (snapshot.hasData) {
-                    return Markdown(
-                      data: snapshot.data,
-                      onTapLink: (s, b, c) {
-                        print(s + b + c);
-                      },
-                    );
-                  } else {
-                    return Center(
-                      child: Text("加载中..."),
-                    );
-                  }
-                },
-              ),
-            ),
-            flex: 3,
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(),
-          ),
+          Expanded(flex: 1, child: Container()),
+          _markdownWidget(),
+          Expanded(flex: 1, child: Container()),
         ],
       ),
+    );
+  }
+
+  Widget _markdownWidget() {
+    return Expanded(
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 44),
+        child: FutureBuilder(
+          future: rootBundle.loadString('assets/md/flutter_anmation.md'),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            if (snapshot.hasData) {
+              return Markdown(
+                data: snapshot.data,
+                onTapLink: (s, b, c) {
+                  print(s + b + c);
+                },
+              );
+            } else {
+              return Center(
+                child: Text("加载中..."),
+              );
+            }
+          },
+        ),
+      ),
+      flex: 3,
     );
   }
 }
