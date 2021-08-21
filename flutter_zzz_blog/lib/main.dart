@@ -6,7 +6,7 @@ import 'home/home_page.dart';
 
 void main() {
   runApp(GetMaterialApp(
-    title: 'blog',
+    title: 'zzz的博客',
     theme: ThemeData(primaryColor: Color(0xFFFFFFFF)),
     initialRoute: '/',
     getPages: Routes.pages(),

@@ -4,19 +4,32 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "00ae2bd8467ef7ca810486cea0848884",
-"index.html": "228cb1d6c021005b121e7c3dbfb724e4",
-"/": "228cb1d6c021005b121e7c3dbfb724e4",
-"main.dart.js": "674c7b63dd8588388222afe1a844c06b",
+"index.html": "82c4c5cb7a8046bbfc13ee45f9b5500f",
+"/": "82c4c5cb7a8046bbfc13ee45f9b5500f",
+"main.dart.js": "6a2b72be20b1f596ccd2654a030a79e6",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "e386fc365e2626e866ac6b3134b33dab",
-"assets/AssetManifest.json": "9a54296d73054d929d9722f8ebdc16ed",
-"assets/NOTICES": "1f87d92caa028b3e67b041a62e081028",
+"assets/AssetManifest.json": "af9a71072231787fe79b07ee7e7147b0",
+"assets/NOTICES": "7e8218a006d72592cf9e24f85e4b2707",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/assets/md/flutter_anmation.md": "af6097e5044051afa2f7b021cf1bcd5b"
+"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
+"assets/assets/images/8.png": "a4ece91bced39c9a58c1e526888e5bd5",
+"assets/assets/images/9.png": "4e4273550f5320295255cebcc3c12627",
+"assets/assets/images/12.png": "22f6ef980574a4e4afd471576fa186cc",
+"assets/assets/images/11.png": "afeadea76c3d7bfb26b6a9fa9f3f5ffd",
+"assets/assets/images/10.png": "5ec504907f1a523b7301ce4a3aff0b2d",
+"assets/assets/images/4.png": "ed485c1774e30a63c9b18dbc5ceaccc0",
+"assets/assets/images/5.png": "ee9d683d6937b058c45e87a45118c8b5",
+"assets/assets/images/7.png": "33483a115815ca9719f9cc9c1c806eaf",
+"assets/assets/images/6.png": "66169c9069d64d60b2d91fc384f8ca3b",
+"assets/assets/images/2.png": "ada59d0e100c19a96392a3712ee579bc",
+"assets/assets/images/3.png": "ee63b8d65bf523671a2ef937acd179ab",
+"assets/assets/images/1.png": "550b2e42d1f0fac9765ea4100d3ec4df",
+"assets/assets/datas/home.json": "b3ee4bb52917428d5209f9815caf77b2",
+"assets/assets/md/flutter_anmation.md": "7ad0a4f8b31d2a45c5ed938b75917545"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -34,7 +47,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });

@@ -12,7 +12,7 @@ class Routes {
       GetPage(name: '/', page: () => HomePage()),
       GetPage(
         name: RoutesName.DetailPageRoute,
-        page: () => DetailPage(),
+        page: () => DetailPage(url: "assets/md/flutter_anmation.md"),
         transition: Transition.noTransition,
       ),
     ];

@@ -1,10 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:markdown_widget/markdown_widget.dart';
 
 class DetailPage extends StatefulWidget {
-  const DetailPage({Key? key}) : super(key: key);
+  String? url;
+  DetailPage({
+    Key? key,
+    @required this.url,
+  }) : super(key: key);
 
   @override
   _DetailPageState createState() => _DetailPageState();
@@ -29,21 +33,21 @@ class _DetailPageState extends State<DetailPage> {
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 44),
         child: FutureBuilder(
-          future: rootBundle.loadString('assets/md/flutter_anmation.md'),
+          future: rootBundle.loadString(widget.url ?? ""),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
-              return Markdown(
+              return MarkdownWidget(
                 data: snapshot.data,
-                onTapLink: (s, b, c) {
-                  b = b ?? '';
-                  print(s + b + c);
-                },
-              );
-            } else {
-              return Center(
-                child: Text("加载中..."),
+                styleConfig: StyleConfig(
+                    pConfig: PConfig(
+                      onLinkTap: (url) => print(url),
+                    ),
+                    videoConfig: VideoConfig(autoInitialize: true)),
               );
             }
+            return Center(
+              child: Text("加载中..."),
+            );
           },
         ),
       ),

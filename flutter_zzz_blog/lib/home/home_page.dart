@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_zzz_blog/home/home_mixins.dart';
+import 'package:flutter_zzz_blog/models/home.dart';
 import 'package:flutter_zzz_blog/routes/routes.dart';
 import 'package:flutter_zzz_blog/widges/common_widget_mixin.dart';
 import 'package:get/instance_manager.dart';
@@ -14,10 +16,26 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with CommonWidgetMixin {
-  List dataList = ['1', '2', '3'];
+class _HomePageState extends State<HomePage> with CommonWidgetMixin, HomeMixin {
+  List<HomeModel> dataList = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadData().then((value) {
+      setState(() {
+        dataList = value;
+      });
+    });
+  }
+
   void _cellItemClick({int? index}) {
-    Get.toNamed(RoutesName.DetailPageRoute);
+    if (index == null) return;
+    Get.toNamed(
+      RoutesName.DetailPageRoute,
+      arguments: {"url": dataList[index].url},
+    );
   }
 
   @override
@@ -25,7 +43,7 @@ class _HomePageState extends State<HomePage> with CommonWidgetMixin {
     return Scaffold(
       body: Column(
         children: [
-          topWidget(),
+          // topWidget(),
           _listWidget(),
         ],
       ),
@@ -42,7 +60,7 @@ class _HomePageState extends State<HomePage> with CommonWidgetMixin {
           itemCount: dataList.length,
           itemBuilder: (context, index) {
             return GestureDetector(
-              child: _cellWidget(),
+              child: _cellWidget(index: index),
               onTap: () {
                 _cellItemClick(index: index);
               },
@@ -54,7 +72,8 @@ class _HomePageState extends State<HomePage> with CommonWidgetMixin {
   }
 
   ///列表 cell
-  Widget _cellWidget() {
+  Widget _cellWidget({int? index}) {
+    HomeModel _model = dataList[index ?? 0];
     return Container(
       padding: EdgeInsets.only(top: 44),
       child: Row(
@@ -64,7 +83,10 @@ class _HomePageState extends State<HomePage> with CommonWidgetMixin {
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: Colors.black,
+              image: DecorationImage(
+                image: AssetImage(_model.image ?? ""),
+                fit: BoxFit.contain,
+              ),
             ),
             width: 160,
             height: cellHeight,
@@ -73,7 +95,7 @@ class _HomePageState extends State<HomePage> with CommonWidgetMixin {
           Container(
             constraints: BoxConstraints(maxWidth: 330),
             height: cellHeight,
-            child: _textWidget(),
+            child: _textWidget(index: index),
           ),
         ],
       ),
@@ -81,21 +103,23 @@ class _HomePageState extends State<HomePage> with CommonWidgetMixin {
   }
 
   ///标题 描述
-  Widget _textWidget() {
+  Widget _textWidget({int? index}) {
+    HomeModel? _model = index == null ? null : dataList[index];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           child: Text(
-            '我是标题啊',
+            _model?.title ?? "",
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
           ),
         ),
         SizedBox(height: 5),
         Container(
           child: Text(
-            '我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述我是描述描述',
-            style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w500),
+            _model?.describe ?? "",
+            style: TextStyle(
+                fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w500),
             maxLines: 2,
             softWrap: true,
             overflow: TextOverflow.ellipsis,
@@ -104,8 +128,9 @@ class _HomePageState extends State<HomePage> with CommonWidgetMixin {
         SizedBox(height: 5),
         Container(
           child: Text(
-            '2021-06-21',
-            style: TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w500),
+            _model?.date ?? "",
+            style: TextStyle(
+                fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w500),
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),

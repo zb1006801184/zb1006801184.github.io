@@ -1,16 +1,15 @@
-**一什么是动画？**
+#  一  什么是动画？
 
 在一段时间内，快速地多次改变UI外观；由于人眼会产生视觉暂留，所以最终看到的就是一个“连续”的动画，这和电影的原理是一样的。我们将UI的一次改变称为一个动画帧，对应一次屏幕刷新，而决定动画流畅度的一个重要指标就是帧率FPS（Frame Per Second），即每秒的动画帧数。很明显，帧率越高则动画就会越流畅！一般情况下，对于人眼来说，动画帧率超过16FPS，就比较流畅了，超过32FPS就会非常的细腻平滑，而超过32FPS，人眼基本上就感受不到差别了
 
-
-#### 其他小知识介绍：
-
+#  其他小知识介绍：
 电影是固定24帧
 普通游戏 普通玩家  32帧就很流畅，操作要求越高  帧数要求越高
 为什么同样是60帧有些游戏看起来卡，有些游戏看起来很流畅呢， 不是匀速的画帧， 举个例子，60帧  前半秒59帧  后半秒1帧，毫无疑问这是爆炸卡的。
 
-### 二  基础概念
-#### Animation
+#  二  基础概念
+
+####  Animation
 Animation 对象， 它是一个抽象类，保存了当前动画的值和状态（开始、暂停、前进、倒退），但不记录屏幕上显示的内容。UI 元素通过读		取 Animation 对象的值和监听状态变化运行 build 函数，然后渲染到屏幕上形成动画效果。
 一个 Animation 对象在一段时间内会持续生成介于两个值之间的值，比较常见的类型是 Animation<double>，除 double 类型之外还有 Animation<Color> 或者 Animation<Size> 等。
 #### AnimationController
@@ -207,26 +206,6 @@ class DemoPainter extends CustomPainter {
 补间动画 “介于两者之间”的简称。在补间动画中，定义了开始点和结束点、时间线以及定义转换时间和速度的曲线。然后由框架计算如何从开始点过渡到结束点。
 物理动画  模拟现实世界物体运动的动画***
 
-### 四  我们该如何选择动画？
 
 
 
-
-Implicit Animations 隐式动画
-
-Explicit Animation 显示动画
-
-Low-Level Animation 低选择级别动画（画板）
-
-Third-Party Animation Fameword 第三方动画库 如 Flare Lottie
-
-![0T-YZa36Dv2a9xTLc.png](<Img>https://upload-images.jianshu.io/upload_images/2530176-c15c47ba6055e9b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240<Img>)
-
-
-![Pasted Graphic.png](<Img>https://upload-images.jianshu.io/upload_images/2530176-0651f261d1cc7e6b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240<Img>)
-
-[demo]( https://github.com/zb1006801184/flutter_anmation_demo)
-
-#### 参考
-https://coldstone.fun/post/2020/04/26/flutter-animation-from-zero/
-https://medium.com/flutter/how-to-choose-which-flutter-animation-widget-is-right-for-you-79ecfb7e72b5
