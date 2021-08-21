@@ -1,6 +1,6 @@
 [
     {
-        "image": "images/1.png",
+        "image": "assets/images/1.png",
         "title": "flutter动画的选择",
         "describe": "flutter开发过程中如何选择合适的动画方案",
         "date": "2021-05-31",

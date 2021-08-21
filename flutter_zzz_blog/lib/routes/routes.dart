@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_zzz_blog/detail/detail_page.dart';
 import 'package:flutter_zzz_blog/home/home_page.dart';
+import 'package:flutter_zzz_blog/platform_dector/platform_dector.dart';
 import 'package:get/route_manager.dart';
 
 class RoutesName {
@@ -13,7 +15,9 @@ class Routes {
       GetPage(
         name: RoutesName.DetailPageRoute,
         page: () => DetailPage(url: "assets/md/flutter_anmation.md"),
-        transition: Transition.noTransition,
+        transition: PlatformDetector.isAllMobile
+            ? Transition.cupertino
+            : Transition.noTransition,
       ),
     ];
   }

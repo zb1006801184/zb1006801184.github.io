@@ -1,6 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_zzz_blog/platform_dector/platform_dector.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 
 class DetailPage extends StatefulWidget {
@@ -20,9 +24,11 @@ class _DetailPageState extends State<DetailPage> {
     return Scaffold(
       body: Row(
         children: [
-          Expanded(flex: 1, child: Container()),
+          if (!PlatformDetector.isAllMobile)
+            Expanded(flex: 1, child: Container()),
           _markdownWidget(),
-          Expanded(flex: 1, child: Container()),
+          if (!PlatformDetector.isAllMobile)
+            Expanded(flex: 1, child: Container()),
         ],
       ),
     );
