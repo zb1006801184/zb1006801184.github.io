@@ -9,7 +9,8 @@ void main() {
     title: 'zzz的博客',
     theme: ThemeData(primaryColor: Color(0xFFFFFFFF)),
     initialRoute: '/',
-    getPages: Routes.pages(),
+    // getPages: Routes.pages(),
+    onGenerateRoute: onGenerateRoute,
     home: HomePage(),
   ));
 }
