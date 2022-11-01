@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_zzz_blog/platform_dector/platform_dector.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 
@@ -45,7 +46,10 @@ class _DetailPageState extends State<DetailPage> {
               return MarkdownWidget(
                 data: snapshot.data,
                 styleConfig: StyleConfig(
+                  titleConfig: TitleConfig(showDivider: false),
                     pConfig: PConfig(
+                      
+                      textStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.normal),
                       onLinkTap: (url) => print(url),
                     ),
                     videoConfig: VideoConfig(autoInitialize: true)),

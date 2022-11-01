@@ -5,5 +5,12 @@
         "describe": "flutter开发过程中如何选择合适的动画方案",
         "date": "2021-05-31",
         "url": "assets/md/flutter_anmation.md"
+    },
+    {
+        "image": "assets/images/2.png",
+        "title": "搭建个人博客（flutter）",
+        "describe": "创建博客",
+        "date": "2021-10-28",
+        "url": "assets/md/create_blog.md"
     }
 ]
