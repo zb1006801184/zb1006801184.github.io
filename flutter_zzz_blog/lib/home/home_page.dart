@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_zzz_blog/detail/detail_page.dart';
 import 'package:flutter_zzz_blog/home/home_mixins.dart';
 import 'package:flutter_zzz_blog/models/home.dart';
-import 'package:flutter_zzz_blog/routes/routes.dart';
 import 'package:flutter_zzz_blog/widges/common_widget_mixin.dart';
-import 'package:get/instance_manager.dart';
-import 'package:get/route_manager.dart';
 
 ///cell的高度
 const double cellHeight = 90.0;
@@ -21,7 +19,6 @@ class _HomePageState extends State<HomePage> with CommonWidgetMixin, HomeMixin {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     loadData().then((value) {
       setState(() {
@@ -32,10 +29,11 @@ class _HomePageState extends State<HomePage> with CommonWidgetMixin, HomeMixin {
 
   void _cellItemClick({int? index}) {
     if (index == null) return;
-    Get.toNamed(
-      RoutesName.DetailPageRoute,
-      arguments: {"url": dataList[index].url},
-    );
+    Navigator.of(context).push(PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) {
+        return DetailPage(url: dataList[index].url);
+      },
+    ));
   }
 
   @override

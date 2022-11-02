@@ -27,7 +27,6 @@ final Map<String, Function> routes = {
 };
 
 var onGenerateRoute = (RouteSettings settings) {
-  // ignore: top_level_function_literal_block
   // 统一处理
   final String name = settings.name ?? "";
   final pageContentBuilder = routes[name];
@@ -40,4 +39,5 @@ var onGenerateRoute = (RouteSettings settings) {
       return route;
     }
   }
+  return null;
 };
